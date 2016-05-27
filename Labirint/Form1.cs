@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Labirint
@@ -19,7 +12,14 @@ namespace Labirint
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            Sound.play_start();
+            Level1 level1 = new Level1();
+           DialogResult dr = level1.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+                level2();             
+        }
+        private void level2()
+        {
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
